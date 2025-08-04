@@ -1,0 +1,104 @@
+.register-page{
+    width:100vw;
+    min-height:100vh;
+      background-color:rgb(255, 255, 255);
+
+}
+
+
+.register-page .register-form{
+   display:flex;
+   flex-direction:column;
+   gap:20px;
+   align-items:center;
+   justify-content:center;
+
+}
+
+
+
+ .register-page  .logo{
+    width:350px;
+    height:auto;
+      margin-top:50px;
+      border:none;
+    
+  
+ }
+
+ .register-page .register-form  .register-title{
+    font-size:27px;
+    color:#FF6700;
+   
+    
+
+ }
+
+
+ 
+
+
+
+ .register-page .register-form  .register-inputs-container{
+   display:flex;
+   flex-direction:column;
+   gap:20px;
+ }
+
+
+
+  .register-page .register-form  .register-inputs-container .register-input{
+     width:335px;
+     height:40px;
+     background-color:#ffffff;
+     color:#000000;
+     border-radius:10px;
+ 
+     box-shadow:rgb(0,0,10);
+  }
+
+   .register-page .register-form  .register-button-container .register-button{
+      width:335px;
+      height:40px;
+      background-color:#FF6700;
+      
+
+   }
+
+    .register-page .register-form       .google-apple-microsoft-account-container{
+
+   display:flex;
+   flex-direction:row;
+   gap:20px;
+    }
+
+
+     .register-page .register-form       .google-apple-microsoft-account-container .account-button {
+      width:51px;
+      height:61px;
+      color:rgb(1,30,57,0.60);
+      font-size:12px;
+      border-radius:5px;
+
+       
+       
+     }
+
+       .register-page .register-form       .google-apple-microsoft-account-container .account-button .account-icon{
+
+       }
+
+        .register-page .register-link .register-link-text{
+          font-size:16px;
+          color:rgb(1,30,57,0.60);
+          text-align:center;
+        }
+
+         .register-page .register-link .register-link-anchor{
+            color:#FF6700;
+            text-decoration:none;
+         }
+
+         .register-page .register-link .register-link-anchor:hover{
+            text-decoration:underline;
+         }

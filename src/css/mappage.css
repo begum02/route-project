@@ -1,0 +1,264 @@
+
+
+
+.map-page{
+    width: 100%;
+    height:100%;
+    position: relative;
+}
+
+.map-page #map{
+  pointer-events:auto;
+  width:100%;
+  height:100%;
+}
+
+.map-page .login-button-container{
+  position:absolute;
+ right:480px;
+  top:20px;
+}
+
+
+.map-page .login-button-container .login-button{
+  width:140px;
+  height:43px;
+  border-radius:26px;
+  text-align:center;
+  font-weight:bold;
+  font-size:16px;
+
+
+  background-color:#FF6700;
+  color: #fff;
+  border-radius:10px;
+}
+.left-sidebar{
+    width:330px;
+   min-height:280px;
+   height:auto;
+    max-height:700px;
+    overflow-y: scroll;
+    background-color: #ffffff;
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    border-radius:10px;
+
+}
+
+.right-sidebar{
+  position:absolute;
+  right:0px;
+  top:0;
+  bottom:0;
+  
+  background-color:#ffffff;
+  width:400px;
+  height:100%;
+}
+
+ .left-sidebar .left-sidebar-items{
+    display:flex;
+    flex-direction:column;
+ 
+    justify-content:space-between;
+      align-items:center;
+    margin:0px;
+    padding:0px;
+ 
+ }
+
+  .left-sidebar .left-sidebar-items .route-inputs{
+    display:flex;
+    flex-direction:column;
+   
+    width:auto;
+    height:auto;
+
+    gap:1.25px;
+    margin-top:10px;
+  }
+
+
+  .left-sidebar .left-sidebar-items .start-location-input{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    margin-right:35px;
+
+    
+  
+
+  }
+
+
+        
+.left-sidebar .left-sidebar-items .start-location-input  .location-input-icon-svg{
+   color:rgb(208,15,15,100);
+}
+
+  
+
+   .left-sidebar .left-sidebar-items .start-location-input .location-input-field{
+    width:224px;
+    height:28px;
+    border-radius:10px;
+    background-color: #fff;
+     border:1px solid rgb(3,3,3,100);  
+
+   }
+  
+   .left-sidebar .left-sidebar-items   .end-location-input{
+   display:flex;
+   flex-direction:row;
+   align-items:center;
+   justify-content:center;
+   margin-right:35px;
+   
+}
+
+   .left-sidebar .left-sidebar-items   .end-location-input   .location-input-icon-svg{
+    color:rgb(57,201,17,100);
+   }
+
+
+   .left-sidebar .left-sidebar-items   .end-location-input  .location-input-field{
+    width:224px;
+    height:28px;
+    border-radius:10px;
+    background-color: #fff;
+    border:1px solid rgb(3,3,3,100);    
+
+   }
+   .left-sidebar .left-sidebar-items .waystationbutton-routebutton{
+    display:flex;
+    flex-direction:row;
+    width:268px;
+    align-items:center;
+    justify-content:space-between;
+    margin-top:20px;
+
+   }
+
+   .left-sidebar .left-sidebar-items .waystations-input{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+
+    gap:10px;
+    padding:0px;
+    margin-bottom:5px;
+    margin-top:5px;
+    height:auto;
+    
+
+   }
+      .left-sidebar .left-sidebar-items .waystations-input .waystation-input{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        width:268px;
+        height:auto;
+        align-items:center;
+        background-color: #fff;
+        padding:0px;
+        margin-bottom:0px;
+        margin-top:0px;
+
+       
+        
+       margin-right:35px;
+        
+      }
+
+      .left-sidebar .left-sidebar-items .waystations-input .waystation-input .location-input-icon-svg{
+        color:rgb(17,105,201,100);
+        
+
+   
+        padding:0px;
+        margin:0px;
+        margin-left:6px;
+       
+      }
+
+    
+
+       .left-sidebar .left-sidebar-items .waystations-input .waystation-input .location-input-field{
+        width:224px;
+        height:30px;
+        background-color:#ffffff;
+        margin:0px;
+        padding:0px;
+        border:1px solid rgb(3,3,3,100);
+        border-radius:10px;
+       }
+   .left-sidebar .left-sidebar-items .waystationbutton-routebutton .add-route-button-icon{
+    width:30px;
+    height:30px;
+    border-radius:3px;
+    border:none;
+    background-color: #fff;
+   color: rgb(255,103,0,100);
+   position:relative;
+   right:12px;
+   }
+   .left-sidebar .left-sidebar-items .waystationbutton-routebutton     .draw-route-button{
+    width:100px;
+    height:auto;
+    text-align:center;
+    background-color: rgb(17,105,201,100);
+      color: #fff;
+      margin-right:20px;
+   }
+    .left-sidebar .left-sidebar-items .profile-icons{
+ 
+     display:flex;
+    flex-direction:row;
+    gap:20px;
+    margin-top:20px;
+    align-items:center;
+      justify-content:center;
+
+ }
+
+ .left-sidebar   .left-sidebar-items .profile-icons .profil-button{
+    width:30px;
+    height:30px;
+    border-radius:3px;
+    background-color: rgb(255,103,0,0.42);
+
+
+}
+   .left-sidebar  .left-sidebar-items .profile-icons  .profil-button   .profil-button-icon{
+    
+       color: #FF6700;
+        opacity:1;
+
+   }
+
+
+   .left-sidebar .left-sidebar-items .profile-icons .profil-button:hover{
+    border: 2px solid #FF6700;
+   }
+.map-page .left-sidebar-closed {
+      position:absolute;
+      left:20px;
+      top:20px;
+    }
+  .map-page  .left-sidebar-closed .menu-button{
+    
+      left:20px;
+      width:59px;
+      height:49px;
+      background-color: #fff;
+      border-radius:10px;
+
+    }
+
+      .left-sidebar .left-sidebar-items  .left-sidebar-closed .menu-button .menu-button-icon{
+       color: #FF6700;
+      }
