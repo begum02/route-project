@@ -7,9 +7,18 @@ export default defineConfig({
   build:{
     outDir:'dist'
   },
-    server: {
-    port: 3000,
-    open: true
+   assetsInclude: ['**/*.html'],
+   server: {
+      host: '127.0.0.1',
+    port: 5173,
+    open: true,
+    proxy: {
+      '/api/autocompletea.ts': {
+        target: 'http://127.0.0.1:3000',
+        changeOrigin: true,
+        secure: false
+      }
+    }
   },
   preview: {
     port: 4173

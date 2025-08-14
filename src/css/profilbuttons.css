@@ -1,0 +1,67 @@
+
+.profile-icons{
+  display: flex!important;
+  flex-direction: column !important;
+  margin-right:10px !important;
+  align-items: flex-start !important;
+  justify-content: start !important;
+
+
+
+
+}
+
+.profile-icons .profile-buttons {
+  display:flex;
+  flex-direction:row;
+  gap:20px;
+
+  justify-content:space-between !important;
+
+
+ 
+
+}
+
+
+.profile-icons .profil-button {
+  /* Normal buton stili */
+      width:30px;
+    height:30px;
+    border-radius:3px;
+    color:rgb(255,103,0,1);
+    background-color: rgb(255,103,0,0.42);
+}
+
+.profil-buttonactive {
+        width:30px;
+    height:30px;
+    border-radius:3px !important;
+     background-color: #FF6700 !important;
+    color: #fff !important;
+
+}
+
+
+
+.profile-icons  .vehicle-profile {
+
+     max-width:120px !important;
+  height:auto !important;
+  border-radius:10px !important;
+  border:1px solid #ff6700 !important;
+  display:block !important; /* İçerik varsa göster */
+  visibility:visible !important; /* İçerik varsa görünür yap */
+  color:#ff6700 !important;
+  padding:5px !important;
+
+}
+
+/* İçerik varsa göster */
+.profile-icons .vehicle-profile:empty {
+  display:none !important;/* veya flex, inline-block gerektiği gibi */
+  visibility:hidden !important;
+  border:none !important;
+
+}
+

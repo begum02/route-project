@@ -1,0 +1,17 @@
+
+
+.MuiAutocomplete-root{
+
+  width:228px;
+ 
+}
+
+.MuiAutocomplete-inputRoot{
+ height:32px !important;
+ border-radius:10px !important;
+}
+
+.MuiAutocomplete-input{
+  border-radius:10px;
+   height:28px !important;
+}
