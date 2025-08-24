@@ -1,0 +1,94 @@
+.drawer-container {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 1300;
+ 
+}
+
+.drawer-container .toggle-button-open{
+  position: fixed;
+  right:400px;
+  top:42vh;
+  height:130px;
+  width:35px;
+
+  padding:0px;
+ background-color: #ffffffff;
+  color:rgb(255 103 0);
+ box-shadow:none;
+ border:none;
+ font-size:40px;
+
+
+}
+
+.drawer-container .toggle-button-open svg{
+  padding:0px;
+  margin:0px;
+  width:40px;
+  height:50px;
+  margin-left:8px;
+  color:rgb(255 103 0);
+  border:none;
+
+
+}
+
+
+
+.drawer-container .toggle-button-close{
+  position: fixed;
+  right:0px;
+  top:42vh;
+  height:130px;
+  width:35px;
+
+  padding:0px;
+ background-color: #ffffffff;
+  color:rgb(255 103 0)
+ box-shadow:none;
+ border:none;
+
+
+}
+.drawer-container .toggle-button-close svg{
+  padding:0px;
+  margin:0px;
+  width:40px;
+  height:50px;
+  margin-left:8px;
+  color:rgb(255 103 0);
+  border:none;
+
+}
+.toggle-button:hover {
+  background-color: #303f9f;
+}
+
+ .drawer-container .right-drawer {
+  width: 600px;
+
+  overflow-x:hidden;
+}
+
+.drawer-content {
+width: 100%;
+  
+}
+.right-drawer .MuiDrawer-paper {
+  min-width: 400px;
+  max-width: 480px;
+  background-color: #ffffff;
+  box-shadow: none !important; /* Shadow'u kapatır */
+}
+
+.MuiBackdrop-root {
+  backdrop-filter: none !important;
+  background: transparent !important;
+}

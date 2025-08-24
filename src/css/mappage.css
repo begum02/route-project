@@ -53,8 +53,7 @@
   right:0px;
   top:0;
   bottom:0;
-  
-  background-color:#ffffff;
+
   width:400px;
   height:100%;
 }
@@ -158,7 +157,7 @@
     flex-direction:row;
     align-items:center;
     justify-content:center;
-    margin-right:35px;
+    margin-right:0px;
       }
 
       .left-sidebar .left-sidebar-items .waystations-input .waystation-input .location-input-icon-svg{

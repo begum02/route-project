@@ -1,7 +1,7 @@
 
 
-export default function NumberedLocationIcon({waypointCount}:{waypointCount:number}) {
-    console.log("Rendering waypoint with number:", waypointCount); // Debug log
+export default function NumberedLocationIcon({number}:{number:number}) {
+   
 
   return(
     <>
@@ -20,7 +20,7 @@ export default function NumberedLocationIcon({waypointCount}:{waypointCount:numb
           y="21"         
           
         >
-          {waypointCount}
+          {number}
         </text>
        
       </svg>
