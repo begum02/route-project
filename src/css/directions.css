@@ -82,6 +82,8 @@
     font-size:20px;
     color:rgb(3,3,3,100);
     margin-left:5px;
+
+    width:max-content;
 }
 
 
@@ -90,4 +92,5 @@
     font-weight:600;
     color:rgb(3,3,3,100);
     margin-left:5px;
+    width:max-content;
 }

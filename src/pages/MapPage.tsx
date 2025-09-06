@@ -41,9 +41,13 @@ import Style from 'ol/style/Style';
 import Stroke from 'ol/style/Stroke';
 import VectorLayer from 'ol/layer/Vector';      // DOĞRU!
 import VectorSource from 'ol/source/Vector';    // DOĞRU!
+import { useNavigate } from 'react-router-dom';
+// ...diğer importlar...
 
 
 const MapPage = () => {
+    const navigate = useNavigate();
+
     const mapRef = useRef<HTMLDivElement | null>(null);
     const mapInstance=useRef<Map|null>(null);
     const routeLayerRef = useRef<VectorLayer | null>(null);
@@ -54,7 +58,7 @@ const [waypoints,setWaypoints] = useState<{id:string,value:string}[]>([]);
     const[isLoggedIn,setIsLoggedIn]=useState(false);
     const[isDropped,setIsDropped]=useState<boolean>(false);
    const[leftSidebarOpen,setLeftSidebarOpen]=useState(true);
-   const[rightSidebarOpen,setRightSidebarOpen]=useState(true);
+   const[rightSidebarOpen,setRightSidebarOpen]=useState<boolean>(true);
     const [menuOpen,setMenuOpen]=useState<boolean>(false);
    const [droppedIcons, setDroppedIcons] = useState<string[]>([]); // Bırakılan ikonların id'lerini tutar
  const[isGeocodingEnabled,setIsGeocodingEnabled]=useState<boolean>(true);
@@ -463,7 +467,7 @@ useEffect(() => {
       }
     });
   }
-}, [startAdress, endAdress, wayPointAddresses, fetchDirections]);
+}, [startAdress, endAdress, wayPointAddresses]);
 const drawRouteLine = (geometry:[number, number][]) => {
   console.log('Drawing route line with geometry:', geometry);
     if (!mapInstance.current) {
@@ -637,7 +641,7 @@ const dragEndHandler=(e:React.DragEvent<HTMLDivElement>)=>{
 
 }
 
-return(<div className="map-page">
+return (<div className="map-page">
 
 <div id="map" style={{ width: '100%', height: '100%' }} ref={mapRef} onDragOver={dragOverHandler} onDrop={dropHandler}>   </div>
  {leftSidebarOpen?(<div className="left-sidebar">
@@ -817,22 +821,45 @@ return(<div className="map-page">
 
 
 </div>)}
-{isLoggedIn?(<div className='user-profile'> </div>):(<div className="login-button-container"><button className="login-button">Oturum aç</button> </div>)
-    }
-<div className='right-sidebar'>
 
-<RightSidebar/>
+<div className="right-sidebar">
+  
+        <RightSidebar open={rightSidebarOpen} setOpen={setRightSidebarOpen}/>
+    </div>
+        
+        {rightSidebarOpen ? (
+  <div className="right-sidebar-opened">
+
+    {isLoggedIn ? (
+      <div className='user-profile'> </div>
+    ) : (
+      <div className="login-button-container sidebar-open">
+        <button className="login-button" onClick={() => navigate('/login')}>Oturum aç</button>
+      
+      </div>
+    )}
+  </div>
+) : (
+
+  <div className="login-button-container">
+
+    <button className="login-button" onClick={() => navigate('/login')}>Oturum aç</button>
+
+  </div>
+)}
+
+
+   
+
+
+<button className="login-button" onClick={(e)=>{ e.preventDefault(); navigate('/login');}}>Oturum aç</button>
+
+
 </div>
-     
 
-    
-</div>)
+)
 
 }
-
-
-
-
 
 
 export default MapPage;

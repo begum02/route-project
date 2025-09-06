@@ -15,7 +15,7 @@
 
 .map-page .login-button-container{
   position:absolute;
- right:480px;
+ right:60px;
   top:20px;
 }
 
@@ -39,13 +39,21 @@
    height:auto;
     max-height:700px;
     padding:10px;
-    overflow-y: scroll;
+   /* Scrollbar stilleri */
+  scrollbar-width: thin;
+  scrollbar-color: #bdbdbd #f5f5f5;
+
     background-color: #ffffff;
     position: absolute;
     top: 70px;
     left: 20px;
     border-radius:10px;
 
+}
+@media (min-height: 700px) {
+  .left-sidebar {
+    overflow: auto;
+  }
 }
 
 .right-sidebar{
@@ -61,7 +69,7 @@
  .left-sidebar .left-sidebar-items{
     display:flex;
     flex-direction:column;
- 
+   
     justify-content:space-between;
       align-items:center;
     margin:0px;
@@ -255,3 +263,13 @@
       .left-sidebar .left-sidebar-items  .left-sidebar-closed .menu-button .menu-button-icon{
        color: #FF6700;
       }
+
+  .map-page .login-button-container.sidebar-open {
+  right: 420px !important; /* Sağdan 700px uzaklaştır */
+  transition: right 0.3s;
+}
+login-button{
+  position:fixed;
+  right:500px;
+  
+}

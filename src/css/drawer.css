@@ -13,7 +13,7 @@
 
 .drawer-container .toggle-button-open{
   position: fixed;
-  right:400px;
+  right:500px; /* Drawer genişliğinden biraz fazla */
   top:42vh;
   height:130px;
   width:35px;
@@ -81,14 +81,94 @@
 width: 100%;
   
 }
+
+.drawer-content .address-description{
+  border-radius:5px;
+  margin-top:10px;
+  margin-left:20px;
+  padding:0;
+  font-size:15px;
+ 
+
+    text-transform: none !important;
+      color:rgb(255 103 0) !important;
+    background-color: #ffffff !important;
+  border:1px solid rgb(255 103 0);
+    width: 150px !important;
+    fontWeight:700 !important;
+  
+  
+}
+
+.drawer-content  .route-lists{
+    border-radius:7px;
+  margin-top:10px;
+   margin-left:120px;
+  padding:0;
+  font-size:15px;
+ 
+
+    text-transform: none !important;
+      color:rgb(255 103 0) !important;
+    background-color: #ffffff !important;
+  border:1px solid rgb(255 103 0);
+    width: 150px !important;
+    fontWeight:700 !important;
+
+}
 .right-drawer .MuiDrawer-paper {
-  min-width: 400px;
-  max-width: 480px;
+
+  width: 485px;
   background-color: #ffffff;
   box-shadow: none !important; /* Shadow'u kapatır */
 }
 
-.MuiBackdrop-root {
-  backdrop-filter: none !important;
-  background: transparent !important;
+.drawer-content .address-description, .drawer-content  .route-lists,
+.MuiTab-root {
+  min-height: 32px !important;
+  height: 32px !important;
+  line-height: 32px !important;
+  font-size: 15px !important;
+  padding: 0 12px !important;
+  font-weight: 700 !important;
+}
+
+.drawer-content .address-description.Mui-selected {
+  background-color:rgb(255 103 0) !important; /* Lacivert */
+  color: #fff !important;
+}
+
+.drawer-content .route-lists.Mui-selected {
+  background-color:rgb(255 103 0) !important; /* Lacivert */
+  color: #fff !important;
+}
+
+/* Seçili tabın altındaki çizgiyi kaldırır */
+.MuiTabs-indicator {
+  display: none !important;
+}
+
+/* Tab ve ToggleButton tıklanınca oluşan outline'ı kaldırır */
+.address-description:focus,
+.route-lists:focus,
+.toggle-button-open:focus,
+.toggle-button-close:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.drawer-container .toggle-button-open{
+  position: fixed;
+  top: 42vh;/* veya istediğin konum */
+  right: 485px; /* Drawer genişliğine göre ayarla */
+  z-index: 1401 !important; /* Drawer'ın z-index'i 1400'dür, daha yüksek olmalı */
+  pointer-events: auto;
+}
+
+.drawer-container .toggle-button-close{
+  position: fixed;
+  top: 42vh; /* veya istediğin konum */
+  right: 0px; /* Drawer genişliğine göre ayarla */
+  z-index: 1402 !important; /* Drawer'ın z-index'i 1400'dür, daha yüksek olmalı */
+  pointer-events: auto;
 }

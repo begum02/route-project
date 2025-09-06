@@ -14,13 +14,29 @@
   width:350px;
   height:auto;
 }
+.login-page .login-form{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  justify-content:center;
+  align-items:center;
+
+}
 
 .login-page .login-form .login-form-container{
   display:flex;
   flex-direction:column;
-  gap:10px;
+  gap:20px;
+  justify-content:center;
+  align-items:center;
 }
 
+.login-page  h1{
+  color: rgb(255,103,0,1);
+  font-size:35px;
+  margin-top:-20px;
+  margin-bottom:60px;
+}
 
 .login-page .login-form .login-form-container .login-input{
   width:335px;
@@ -30,3 +46,45 @@
   box-shadow:rgb(0,0,0,1);
   background-color:rgb(255, 255, 255);
 }
+
+.login-page .login-form .login-form-container .login-button{
+  width:340px;
+  height:45px;
+  border:none;
+background-color: rgb(255,103,0,1);
+  color:white;
+  font-weight:600;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+  .login-page .login-form  .login-page-buttons{
+  display:flex !important;
+  flex-direction:column !important;
+  gap:20px !important;
+  margin-top:10px;
+
+
+}
+
+
+  .login-page .login-form  .login-page-buttons .login-page-button{
+    background-color:transparent;
+    border:none;
+     color: rgb(1 30 57 / 60%);
+      border: 2px solid #bdbdbd !important; /* Hafif gri border */
+     background-color: #ecececff !important; 
+    width:340px;
+     text-align:center;
+    font-weight:700;
+    cursor:pointer;
+  }
+
+    .login-page .login-form  .login-page-buttons .login-page-button    .login-page-icon{
+        /* Daha koyu gri */
+
+      width:20px;
+      height:20px;
+      margin-right:10px;
+      margin-bottom:-4px;
+    }

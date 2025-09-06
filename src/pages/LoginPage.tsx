@@ -3,21 +3,25 @@ import GoogleIcon from '@mui/icons-material/Google';
 import MicrosoftIcon from '@mui/icons-material/Microsoft';
 import AppleIcon from '@mui/icons-material/Apple';
 import '../css/loginpage.css'
+import { useNavigate } from 'react-router-dom';
+
 
 export default function LoginPage(){
+
+  const navigate=useNavigate();
+
     return (
         <div className="login-page">
               <img className="logo" src={logo} alt="Logo" />
+              <h1>Giriş Yap</h1>
             <div className="login-form">
 
-              <div className="login-page-title-container">
-                <h3 className="login-page-title">Login</h3>
-               </div>
-
+            
                <form className='login-form-container'>
                 <input type="email" placeholder="Email" className="login-input" />
                 <input type="password" placeholder="Şifre" className="login-input" />
-                <a href="#">Şifremi Unuttum</a>
+                <a href="#">Şifremi Unuttum</a>
+                <a href="#" onClick={e=>{e.preventDefault();navigate("/register")}}>Hesabım yok, Kaydol</a>
                 <button className="login-button">Giriş Yap </button>
                 </form>
 

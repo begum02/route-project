@@ -2,7 +2,7 @@
 import { createBrowserRouter} from 'react-router-dom'; 
 
 
-import loginPage from   '../pages/LoginPage';
+import LoginPage from   '../pages/LoginPage';
 import RegisterPage from '../pages/RegisterPage';
 import MapPage from '../pages/MapPage';
 import { ProfileProvider } from '../context/vehicleprofileprovider';
@@ -30,14 +30,14 @@ const router=createBrowserRouter(
             </Providers>
         ),
     },
-{
-    path:'/Login',
-    Component:loginPage
-},
-{
-    path:'/register',
-    Component:RegisterPage
-}
+    {
+        path: '/login',
+        element: <LoginPage />
+    },
+    {
+        path: '/register',
+        element: <RegisterPage />
+    }
 ])
 
 
